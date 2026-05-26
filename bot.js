@@ -176,7 +176,7 @@ function chainKeyboard(action) {
 
 async function cmdStart(chatId) {
   return sendMessage(chatId,
-    "🐺 <b>CERBERUS TOKEN SCREENER</b>\n\n"
+    "🐺 <b>IRENE TOKEN SCREENER</b>\n\n"
     + "Multi-chain token screening via Telegram. Powered by GMGN API.\n\n"
     + "⛓️ <b>Chains:</b> Solana, BSC, Base, Ethereum\n\n"
     + "⬇️ Pilih fitur di bawah:",
@@ -401,7 +401,7 @@ async function handleCallback(cb) {
   switch (action) {
     case "menu":
       await editMessage(chatId, msgId,
-        "🐺 <b>CERBERUS TOKEN SCREENER</b>\n\nPilih fitur:",
+        "🐺 <b>IRENE TOKEN SCREENER</b>\n\nPilih fitur:",
         mainMenuKeyboard()
       );
       break;
@@ -435,7 +435,7 @@ async function handleCallback(cb) {
       break;
     case "help":
       await sendMessage(chatId,
-        "📖 <b>CERBERUS BOT — COMMANDS</b>\n\n"
+        "📖 <b>IRENE BOT — COMMANDS</b>\n\n"
         + "/start — Main menu\n"
         + "/screen — Screen new tokens\n"
         + "/trending — Trending tokens\n"
@@ -527,7 +527,7 @@ async function cmdDeep(chatId, text) {
 // ── Main Polling Loop ─────────────────────────────────────────
 
 async function main() {
-  console.log("🐺 Cerberus Telegram Bot starting...");
+  console.log("🐺 Irene Telegram Bot starting...");
   console.log(`Token: ${TELEGRAM_TOKEN.slice(0, 8)}...`);
 
   let offset = 0;
@@ -572,7 +572,7 @@ async function main() {
           else if (text.startsWith("/deep")) await cmdDeep(chatId, text);
           else if (text === "/help") {
             await sendMessage(chatId,
-              "📖 <b>CERBERUS BOT — COMMANDS</b>\n\n"
+              "📖 <b>IRENE BOT — COMMANDS</b>\n\n"
               + "/start — Main menu\n"
               + "/screen — Screen new tokens\n"
               + "/trending — Trending tokens\n"
@@ -585,7 +585,7 @@ async function main() {
             );
           } else {
             await sendMessage(chatId,
-              "🐺 <b>Cerberus Screener</b>\n\nPilih fitur di bawah:",
+              "🐺 <b>Irene Screener</b>\n\nPilih fitur di bawah:",
               { reply_markup: mainMenuKeyboard() }
             );
           }
