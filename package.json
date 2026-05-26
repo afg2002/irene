@@ -1,0 +1,22 @@
+{
+  "name": "cerberus",
+  "version": "1.0.0",
+  "description": "Multi-chain token screening CLI powered by GMGN API - supports Base, BSC, and Solana",
+  "main": "src/index.js",
+  "bin": {
+    "cerberus": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "screen": "node src/index.js screen",
+    "trending": "node src/index.js trending"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "gmgn-cli": "^1.3.0",
+    "node-fetch": "^2.7.0",
+    "table": "^6.8.2"
+  }
+}
